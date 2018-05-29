@@ -4,6 +4,8 @@ Follow Unfollow is a Ruby gem it provides Twitter kind of follow and unfollow fu
 
 It works with the dependency of acts_as_follower gem for more details [acts_as_follower](https://github.com/tcocaa/acts_as_follower) 
 
+![follow-unfollow](https://github.com/gordienko/follow_unfollow/blob/master/follow-unfollow.gif)
+
 ##Setup 
 
 ## Gem Installation
