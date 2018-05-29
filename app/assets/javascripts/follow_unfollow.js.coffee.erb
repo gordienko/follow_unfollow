@@ -1,0 +1,43 @@
+#= require jquery.turbolinks
+#= require i18n
+#= require i18n/translations
+
+I18n.locale = "<%= I18n.locale %>"
+
+window.click_following_button = (el) ->
+  unique_id = $(el).attr('id')
+  followable_type = $(el).attr('data-info')
+  msg = I18n.t('js.follow_unfollow.please_login')
+  if $(el).hasClass('unfollow')
+    action = '/unfollow'
+  else
+    action = '/follow'
+  post_data =
+    'followable_id': unique_id
+    'followable_type': followable_type
+  $.post(action, post_data, (data) ->
+    getData = data.toString().split(',')
+    console.log getData
+    if getData[0] == 'true'
+      $(el).addClass('following_button')
+      $(el).text I18n.t('js.follow_unfollow.following')
+    else if getData[0] == 'false'
+      $(el).removeClass('following_button')
+      $(el).removeClass('unfollow')
+      $(el).text I18n.t('js.follow_unfollow.follow')
+    return
+  ).fail (err) ->
+    if err.statusText == 'Unauthorized'
+      alert msg
+    return
+
+$('button.followButton').hover (->
+  if $(this).hasClass('following_button')
+    $(this).addClass 'unfollow'
+    $(this).text I18n.t('js.follow_unfollow.unfollow')
+  return
+), ->
+  if $(this).hasClass('following_button')
+    $(this).removeClass 'unfollow'
+    $(this).text I18n.t('js.follow_unfollow.following')
+  return

@@ -1,0 +1,12 @@
+en:
+  js:
+    follow_unfollow:
+      follow: "Follow"
+      unfollow: "Unfollow"
+      following: "Following"
+      please_login: "Please login to subscribe!"
+  follow_unfollow:
+    follow: "Follow"
+    unfollow: "Unfollow"
+    following: "Following"
+    please_login: "Please login to subscribe!"

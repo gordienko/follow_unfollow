@@ -1,0 +1,12 @@
+ru:
+  js:
+    follow_unfollow:
+      follow: "Подписаться"
+      unfollow: "Отписаться"
+      following: "Подписан"
+      please_login: "Пожалуйста авторизуйтесь, чтобы подписаться!"
+  follow_unfollow:
+    follow: "Подписаться"
+    unfollow: "Отписаться"
+    following: "Подписан"
+    please_login: "Пожалуйста авторизуйтесь, чтобы подписаться!"

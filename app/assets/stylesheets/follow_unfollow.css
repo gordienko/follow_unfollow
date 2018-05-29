@@ -1,0 +1,16 @@
+button.followButton {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    width: 100px;
+}
+button.followButton.following_button {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+button.followButton.unfollow {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
